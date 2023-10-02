@@ -62,71 +62,35 @@ function validarForm() {
         return false;
     }
 
-    return true;
+    document.getElementById("agradecimento").style.display = "block";
+    return false;
 }
+/*
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contatoForm');
 
-document.getElementById('contatoForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Impede o comportamento padrão do botão enviar
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
 
-    // Obter os valores dos campos do formulário
-    var email = document.getElementById('email').value;
-    var telefone = document.getElementById('telefone').value;
+        const email = form.email.value;
+        const telefone = form.telefone.value;
 
-    // Validar os campos do formulário
-    if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-        alert("Email inválido.");
-        return false;
-    }
-
-    if (!/^\d{2}\s\d{9}$/.test(telefone)) {
-        alert("Telefone inválido. Use o formato: 99 987654321");
-        return false;
-    }
-
-    // Enviar a mensagem de contato para o servidor usando a função fetch()
-    fetch('https://seusite.com/api/enviar-contato', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            email: email,
-            telefone: telefone
+        fetch('/api/enviar-contato', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, telefone })
         })
-    })
-    .then(function(response) {
-        return response.json();
-    })
-    .then(function(data) {
-        if (data.status === 'success') {
-            // Após o envio bem-sucedido da mensagem, redireciona o usuário para a página de agradecimento
-            window.location.href = 'agradecimento.html';
-        } else {
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                window.location.href = '/agradecimento.html';
+            } else {
+                alert('Erro ao enviar a mensagem de contato. Por favor, tente novamente.');
+            }
+        })
+        .catch(error => {
+            console.error('Erro:', error);
             alert('Erro ao enviar a mensagem de contato. Por favor, tente novamente.');
-        }
-    })
-    .catch(function(error) {
-        console.error('Erro:', error);
-        alert('Erro ao enviar a mensagem de contato. Por favor, tente novamente.');
+        });
     });
-});
-
-//api >>>>> qqq
-const express = require('express');
-const bodyParser = require('body-parser');
-const app = express();
-
-app.use(bodyParser.json());
-
-app.post('/api/enviar-contato', (req, res) => {
-    const email = req.body.email;
-    const telefone = req.body.telefone;
-
-    // Aqui você pode adicionar o código para validar os dados e armazená-los em um banco de dados ou enviá-los por e-mail
-
-    res.json({ status: 'success' });
-});
-
-app.listen(3000, () => {
-    console.log('API em execução na porta 3000');
-});
+});*/
