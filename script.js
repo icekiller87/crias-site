@@ -80,17 +80,40 @@ document.addEventListener('DOMContentLoaded', function() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email, telefone })
         })
-        .then(response => response.json())
-        .then(data => {
-            if (data.status === 'success') {
-                window.location.href = '/agradecimento.html';
-            } else {
-                alert('Erro ao enviar a mensagem de contato. Por favor, tente novamente.');
-            }
-        })
-        .catch(error => {
-            console.error('Erro:', error);
+    })
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        if (data.status === 'success') {
+            // Após o envio bem-sucedido da mensagem, redireciona o usuário para a página de agradecimento
+            window.location.href = 'agradecimento.html';
+        } else {
             alert('Erro ao enviar a mensagem de contato. Por favor, tente novamente.');
-        });
+        }
+    })
+    .catch(function(error) {
+        console.error('Erro:', error);
+        alert('Erro ao enviar a mensagem de contato. Por favor, tente novamente.');
     });
-});*/
+});
+
+//api >>>>> qqq
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+
+app.use(bodyParser.json());
+
+app.post('/api/enviar-contato', (req, res) => {
+    const email = req.body.email;
+    const telefone = req.body.telefone;
+
+    // Aqui você pode adicionar o código para validar os dados e armazená-los em um banco de dados ou enviá-los por e-mail
+
+    res.json({ status: 'success' });
+});
+
+app.listen(3000, () => {
+    console.log('API em execução na porta 3000');
+});
