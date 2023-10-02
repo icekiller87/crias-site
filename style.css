@@ -18,7 +18,8 @@ body {
 .header-title {
     font-size: 24px;
     opacity: 1;
-    transition: all o.3 ease;
+    transition: all 0.3s ease;
+    text-align: center; /* Adicione esta linha para centralizar o texto */
 }
 
 .menu-button {
