@@ -77,13 +77,15 @@ body {
     display: block;
 }
 
+@media screen and (max-width: 768px) {
+
 /* estilos para dispositivos móveis (por exemplo, telas menores que 768px de largura */
 @media (max-width: 768px) {
     .header-tittle {
         display: block; /* o titulo irá para uma nova linha */
         margin-bottom: 10px; /* Espaçamento entre o título e o botão */
     }
-}
+}}
 
 @keyframes expand {
     from {
