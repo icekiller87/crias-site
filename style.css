@@ -1,0 +1,185 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #F7B32B;
+    color: #071108;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    transition: all 0.3s ease;
+    z-index: 1000; /* Certifique-se de que o header esteja sempre na parte superior */
+}
+
+.header-title {
+    font-size: 24px;
+    opacity: 1;
+    transition: all o.3 ease;
+}
+
+.menu-button {
+    background-color: transparent;
+    color: #FBFBFB;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    position: absolute;
+    top: 30px;
+    right: 60px;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.menu-button {
+    transform: scale(1.1);
+}
+
+.menu {
+    display: none;
+    background-color: #F7B32B;
+    color: #FBFBFB;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    animation: expand 0.3s ease; /* Adiciona animaÃ§Ã£o de expansÃ£o */
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 5px 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #FBFBFB;
+    display: block;
+    font-size: 20px; /* Aumenta o tamanho do texto */
+}
+
+.menu-button.open {
+    transform: rotate(90deg);
+}
+
+.menu.show {
+    display: block;
+}
+
+@keyframes expand {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+main {
+    padding: 45px;
+    padding-top: 100px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}  
+
+input[type="submit"] {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* EstilizaÃ§Ã£o para remover o sublinhado dos links */
+a {
+    text-decoration: none;
+    color: #0931e2; /* Cor padrÃ£o do link */
+}
+
+/* EstilizaÃ§Ã£o para links quando estÃ£o em estado de hover (quando o mouse estÃ¡ sobre eles) */
+a:hover {
+    text-decoration: none; /* Remova o sublinhado */
+    color: #FFCB47; /* Cor quando o mouse estÃ¡ sobre o link */
+}
+
+.scrolled {
+    opacity: 0;
+    transform: translateY(-100%);
+    pointer-events: none;
+}
+
+form {
+    max-width: 500px; /* Define a largura mÃ¡xima do formulÃ¡rio */
+    margin: 0 auto; /* Centraliza o formulÃ¡rio horizontalmente */
+    text-align: left; /* Alinha o texto Ã  esquerda dentro do formulÃ¡rio */
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form input[type="tel"],
+
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #555;
+}
