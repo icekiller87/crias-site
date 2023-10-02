@@ -17,6 +17,7 @@ body {
 
 .header-title {
     font-size: 24px;
+    text-align: center;
     opacity: 1;
     transition: all 0.3s ease;
     text-align: center; /* Adicione esta linha para centralizar o texto */
@@ -74,6 +75,14 @@ body {
 
 .menu.show {
     display: block;
+}
+
+/* estilos para dispositivos móveis (por exemplo, telas menores que 768px de largura */
+@media (max-width: 768px) {
+    .header-tittle {
+        display: block; /* o titulo irá para uma nova linha */
+        margin-bottom: 10px; /* Espaçamento entre o título e o botão */
+    }
 }
 
 @keyframes expand {
