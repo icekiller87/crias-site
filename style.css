@@ -12,13 +12,16 @@ body {
     position: fixed;
     width: 100%;
     transition: all 0.3s ease;
-    z-index: 1000; /* Certifique-se de que o header esteja sempre na parte superior */
+    z-index: 1000;
 }
 
 .header-title {
     font-size: 24px;
+    text-align: center;
     opacity: 1;
-    transition: all o.3 ease;
+    transition: all 0.3s ease;
+    /* Adicione a seguinte linha para centralizar o texto no centro verticalmente */
+    line-height: 60px; /* Ajuste conforme necessário */
 }
 
 .menu-button {
@@ -48,7 +51,7 @@ body {
     padding: 10px;
     margin-top: 20px;
     border-radius: 5px;
-    animation: expand 0.3s ease; /* Adiciona animaÃ§Ã£o de expansÃ£o */
+    animation: expand 0.3s ease;
 }
 
 .menu ul {
@@ -64,7 +67,7 @@ body {
     text-decoration: none;
     color: #FBFBFB;
     display: block;
-    font-size: 20px; /* Aumenta o tamanho do texto */
+    font-size: 20px;
 }
 
 .menu-button.open {
@@ -73,6 +76,16 @@ body {
 
 .menu.show {
     display: block;
+}
+
+/* Estilos para dispositivos móveis (por exemplo, telas menores que 768px de largura) */
+@media screen and (max-width: 768px) {
+    .header-title {
+        display: block; /* O título irá para uma nova linha */
+        text-align: center; /* Centralize o texto horizontalmente */
+        line-height: normal; /* Restaure a altura da linha ao padrão para alinhar verticalmente */
+        margin-top: 10px; /* Espaçamento entre o título e o botão */
+    }
 }
 
 @keyframes expand {
