@@ -48,7 +48,7 @@ body {
     padding: 10px;
     margin-top: 20px;
     border-radius: 5px;
-    animation: expand 0.3s ease; /* Adiciona animaÃ§Ã£o de expansÃ£o */
+    animation: expand 0.3s ease; /* Adiciona animação de expansão */
 }
 
 .menu ul {
@@ -128,16 +128,16 @@ input[type="submit"]:hover {
     background-color: #555;
 }
 
-/* EstilizaÃ§Ã£o para remover o sublinhado dos links */
+/* Estilização para remover o sublinhado dos links */
 a {
     text-decoration: none;
-    color: #0931e2; /* Cor padrÃ£o do link */
+    color: #0931e2; /* Cor padrão do link */
 }
 
-/* EstilizaÃ§Ã£o para links quando estÃ£o em estado de hover (quando o mouse estÃ¡ sobre eles) */
+/* Estilização para links quando estão em estado de hover (quando o mouse está sobre eles) */
 a:hover {
     text-decoration: none; /* Remova o sublinhado */
-    color: #FFCB47; /* Cor quando o mouse estÃ¡ sobre o link */
+    color: #FFCB47; /* Cor quando o mouse está sobre o link */
 }
 
 .scrolled {
@@ -147,9 +147,9 @@ a:hover {
 }
 
 form {
-    max-width: 500px; /* Define a largura mÃ¡xima do formulÃ¡rio */
-    margin: 0 auto; /* Centraliza o formulÃ¡rio horizontalmente */
-    text-align: left; /* Alinha o texto Ã  esquerda dentro do formulÃ¡rio */
+    max-width: 500px; /* Define a largura máxima do formulário */
+    margin: 0 auto; /* Centraliza o formulário horizontalmente */
+    text-align: left; /* Alinha o texto à esquerda dentro do formulário */
 }
 
 form label {
